@@ -1,0 +1,22 @@
+[package]
+name = "fighting_game_vulkan"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Core Vulkan wrapper
+vulkano = "0.35.2"
+# Shader compiler macro (critical for the 'vulkano_shaders::shader!' macro in the code)
+vulkano-shaders = "0.35.0"
+# Window integration
+vulkano-win = "0.34.0"
+# Window handling
+winit = "0.29"
+# Math library for 3D matrices/vectors
+cgmath = "0.18"
+# For casting data types safely
+bytemuck = { version = "1.14", features = ["derive"] }
+
+[[bin]]
+name = "fighting_game_vulkan"
+path = "main.rs"
